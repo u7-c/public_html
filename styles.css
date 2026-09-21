@@ -462,7 +462,7 @@ ul {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  max-width: 900px; /* Constrain text width since images are gone */
+  max-width: 1200px; /* Constrain text width since images are gone */
 }
 
 .hero__content {
@@ -486,7 +486,7 @@ ul {
 }
 
 .hero__body {
-  max-width: 620px;
+  max-width: 1000px;
   margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
