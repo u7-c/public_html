@@ -367,40 +367,6 @@ ul {
   
   .header__mobile-toggle {
     display: block;
-    width: 44px; /* Proper touch target size */
-    height: 44px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end; /* Align lines nicely */
-    gap: 6px;
-  }
-
-  .header__mobile-toggle span {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    transform: none;
-    width: 24px;
-  }
-
-  /* Reset the nth-child absolute positioning for the toggle */
-  .header__mobile-toggle span:nth-child(1) { top: auto; }
-  .header__mobile-toggle span:nth-child(2) { top: auto; transform: none; width: 20px; transition: width 0.3s; }
-  .header__mobile-toggle span:nth-child(3) { bottom: auto; }
-
-  /* Open state transforms */
-  .header.menu-open .header__mobile-toggle span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  
-  .header.menu-open .header__mobile-toggle span:nth-child(2) {
-    opacity: 0;
-    width: 24px;
-  }
-  
-  .header.menu-open .header__mobile-toggle span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
   }
   
   /* Ensure header logo stays visible - removed invert since header is dark */
