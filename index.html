@@ -1191,25 +1191,7 @@
     </footer>
 
     <script>
-      // Simple Mobile Menu Toggle
-      const mobileToggle = document.querySelector('.header__mobile-toggle');
-      const navLinks = document.querySelector('.header__nav');
-      
-      mobileToggle.addEventListener('click', () => {
-        if (navLinks.style.display === 'flex') {
-          navLinks.style.display = 'none';
-        } else {
-          navLinks.style.display = 'flex';
-          navLinks.style.flexDirection = 'column';
-          navLinks.style.position = 'absolute';
-          navLinks.style.top = '100%';
-          navLinks.style.left = '0';
-          navLinks.style.width = '100%';
-          navLinks.style.backgroundColor = 'rgba(248, 247, 244, 0.98)';
-          navLinks.style.padding = '2rem';
-          navLinks.style.borderBottom = '1px solid var(--border-color)';
-        }
-      });
+      // Simple Mobile Menu Toggle removed in favor of CSS-based toggle
 
       // BlurInUp by Character
       class BlurInUpAnimate {

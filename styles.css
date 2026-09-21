@@ -318,12 +318,12 @@ ul {
 @media (max-width: 992px) {
   .header__nav {
     position: fixed;
-    top: 0;
+    top: var(--nav-h);
     left: 0;
     width: 100vw;
     /* Use dvh if supported for better mobile handling */
-    height: 100vh;
-    height: 100dvh;
+    height: calc(100vh - var(--nav-h));
+    height: calc(100dvh - var(--nav-h));
     background-color: var(--bg-primary);
     flex-direction: column;
     justify-content: center;
@@ -392,7 +392,6 @@ ul {
   /* Open state transforms */
   .header.menu-open .header__mobile-toggle span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-    background-color: var(--text-primary);
   }
   
   .header.menu-open .header__mobile-toggle span:nth-child(2) {
@@ -402,13 +401,11 @@ ul {
   
   .header.menu-open .header__mobile-toggle span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-    background-color: var(--text-primary);
   }
   
-  /* Ensure header logo stays visible and switches color on open */
+  /* Ensure header logo stays visible - removed invert since header is dark */
   .header.menu-open .header__logo {
-    color: var(--text-primary); /* Assuming it might be SVG or text */
-    filter: invert(1);
+    z-index: 1001;
   }
 }
 
